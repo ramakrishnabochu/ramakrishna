@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+float fh=50,cel=10;
+fh=(cel*1.8)+32;
+cel=(fh-32)*5/9;
+printf("the fahrenheat=%.2f\n",cel);
+printf("the celsius=%.2f",fh);
+return 0;
+}
