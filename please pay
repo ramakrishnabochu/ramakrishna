@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main()
+{
+	int a=100,b=150,c=250,d=20,e=40,f=60;
+	int q=150;
+	if (q==a)
+	{
+		printf("please pay Rs.%d",d);
+	}
+	else if (q==b)
+	{
+		printf("please pay Rs.%d",e);
+	}
+	else
+	{
+		printf("please pay Rs.%d",e);
+	}
+	return 0;
