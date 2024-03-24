@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+int rows=5,r,c,k;
+for(r=0;r<=rows;r++)
+{
+for(c=0;c<=rows-r;c++)
+{
+printf("*");
+}
+printf("\n");
+}
+return 0;
+}
