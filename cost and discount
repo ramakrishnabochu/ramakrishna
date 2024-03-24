@@ -1,0 +1,180 @@
+[1:18 PM, 3/9/2024] +91 82486 76108: #include <stdio.h>
+int calculateCost(int kg, int rate) {
+    return kg * rate;
+}
+float applyDiscount(float totalCost) {
+    if (totalCost > 300) {
+        return totalCost - (0.20 * totalCost);
+    }
+    return totalCost;
+}
+int main() {
+    int appleRate = 100;
+    int bananaRate = 60;
+    int pomegranateRate = 150;
+    int appleQty = 5;
+    int bananaQty = 3;
+    int pomegranateQty = 7;
+    int appleCost = calculateCost(appleQty, appleRate);
+    int bananaCost = calculateCost(bananaQty, bananaRate);
+    int pomegranateCost = calculateCost(pomegranateQty, pomegranateRate);
+    float TotalCost = appleCost + bananaCost + pomegranateCost;
+    float totalcost = appleCost+ bananaCost+ pomegranateCost;
+    TotalCost = applyDiscount(TotalCost);
+    printf("Cost of apples: %d rupees\n", appleCost);
+    printf("Cost of bananas: %d rupees\n", bananaCost);
+    printf("Cost of pomegranates: %d rupees\n", pomegranateCost);
+    printf("Total cost before discount: %0.2f ruppees\n ",totalcost);
+    printf("Total cost after discount: %.2f rupees\n", TotalCost);
+    printf("Today Saving : %.2f\n",totalcost-TotalCost);
+
+    return 0;
+}
+[9:17 PM, 3/10/2024] +91 6305 782 800: Tomorrow classes  sse or scad ???
+[6:48 AM, 3/11/2024] +91 99940 40671: SCAD Lab 203, Today class room
+[9:25 AM, 3/13/2024] +91 93423 76901: Sum to single digit
+[9:43 AM, 3/13/2024] Navadeep Frnd Saveetha 🤩🤩: Permutations program
+[10:10 AM, 3/13/2024] +91 93423 76901: Frequency of numbers
+[10:11 AM, 3/13/2024] +91 93423 76901: Decimal to binary
+[10:12 AM, 3/13/2024] +91 93423 76901: Decimal to binary
+[10:41 AM, 3/13/2024] +91 93618 15203: Important questions
+[9:02 AM, 3/14/2024] +91 93423 76901: Fibonacci nth number
+[6:38 AM, 3/21/2024] +91 99940 40671: Updated Lab Venue
+[6:38 AM, 3/21/2024] +91 99940 40671: Today class room
+[4:50 PM, 3/21/2024] +91 99940 40671: Tomorrow class room
+[8:52 AM, 3/22/2024] +91 88858 10180: define structure in c for a book record that include fields for the book's title author and array of the review. Each review should include  the reviewers name and a rating out of 5.Use function
+[8:53 AM, 3/22/2024] +91 88858 10180: #include<stdio.h>
+#include<string.h>
+#define  MAX_REVIEWS 10
+#define MAX_NAME_LENGTH 50
+
+	struct Review
+	{
+		char reviewer_name[MAX_NAME_LENGTH];
+		int rating;
+	
+	};
+	struct Book
+	{
+	
+	char title[MAX_NAME_LENGTH];
+	char author[MAX_NAME_LENGTH];
+	
+	struct Review reviews[MAX_REVIEWS];
+	int num_reviews; 
+	
+};
+void addreview(struct Book*book,const char*reviewer_name,int rating)
+{
+	if(book->num_reviews<MAX_REVIEWS)
+	{
+		strcpy(book->reviews[book->num_reviews].reviewer_name,reviewer_name);
+		book->reviews[book->num_reviews].rating=rating;
+		book->num_reviews++;
+		printf("Review added successfully");
+	}
+		else
+		{
+			printf("Max number of review reached");
+		}
+		
+	}
+	int main()
+	{
+		int i;
+		struct Book myBook;
+	strcpy(myBook.title,"Sample Book");
+	strcpy(myBook.au…
+[2:12 PM, 3/22/2024] +91 73374 06224: switch(expression)
+{
+case value1: statement_1;
+             break;
+case value2: statement_2;
+             break;
+.
+.
+.
+case value_n: statement_n;
+              break;
+
+default: default_statement;
+}
+[2:15 PM, 3/22/2024] +91 88256 94183: #include<stdio.h>
+int main()
+{
+	int a=100,b=150,c=250,d=20,e=40,f=60;
+	int q=150;
+	if (q==a)
+	{
+		printf("please pay Rs.%d",d);
+	}
+	else if (q==b)
+	{
+		printf("please pay Rs.%d",e);
+	}
+	else
+	{
+		printf("please pay Rs.%d",e);
+	}
+	return 0;
+}
+[2:15 PM, 3/22/2024] +91 99427 68009: #include <stdio.h>
+
+int main()
+{
+	int coffee = 20;
+	switch (coffee) {
+		case 20:
+			printf("40 rupees");
+			break;
+
+		case 30:
+			printf("60 rupees");
+			break;
+
+		case 50:
+			printf("80 rupees");
+			break;
+
+		default:
+			printf("there is no such type of volume ");
+			break;
+	}
+
+	return 0;
+}
+[2:21 PM, 3/22/2024] +91 81227 30604: #include <stdio.h> 
+#include <string.h> 
+void swap(char* x, char* y) 
+{ 
+	char temp; 
+	temp = *x; 
+	*x = *y; 
+	*y = temp; 
+} 
+void permute(char* a, int l, int r) 
+{ 
+	int i; 
+	if (l == r) 
+		printf("%s\n", a); 
+	else { 
+		for (i = l; i <= r; i++) { 
+			swap((a + l), (a + i)); 
+			permute(a, l + 1, r); 
+			swap((a + l), (a + i)); 
+		} 
+	} 
+} 
+int main() 
+{ 
+	char str[] = "ABC"; 
+	int n = strlen(str); 
+	permute(str, 0, n - 1); 
+	return 0; 
+}
+[2:33 PM, 3/22/2024] +91 99940 40671: Dear Students, 
+Tomorrow,  Level 3 Exam.
+[8:04 AM, 3/23/2024] +91 99940 40671: SCAD203, Today class room
+[8:05 AM, 3/23/2024] +91 99940 40671: Level 3 Exam : 1.30 PM to 3 PM, Today.
+[1:04 PM, 3/23/2024] +91 99940 40671: All staffs can start the test by 1pm
+[1:04 PM, 3/23/2024] +91 99940 40671: Pls come immediately
