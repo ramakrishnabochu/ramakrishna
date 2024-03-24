@@ -1,0 +1,11 @@
+#include<stdio.h>
+int main()
+{
+int a=1,b=2,c=3;
+if(a>b,a>c)
+printf("the greatest among three numbers is %d",a);
+else if(b>c)
+printf("the greatest among three numbers is %d",b);
+else
+printf("the greatest among three numbers is %d",c);
+}
